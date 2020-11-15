@@ -10,6 +10,8 @@ export async function killLord() {
   ];
   // empty the lord to put a new lord
   lord.innerText = "";
-  // // we got the house of this lord
-  // const houseOfTheLord = houseIdList[lordIndex];
+  // we fill the new lord
+  const newlord = await getLord(data.swornMembers[lordIndex]);
+
+  lord.innerText = newlord;
 }
